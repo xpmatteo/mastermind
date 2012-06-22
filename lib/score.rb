@@ -1,11 +1,6 @@
 class Array
   def delete_one(match)
-    for i in (0...size)
-      if match == self[i]
-        self.delete_at(i)
-        return
-      end
-    end
+    delete_at(index(match))
   end
 end
 
@@ -24,6 +19,10 @@ Score = Struct.new(:plus_count, :minus_count) do
   
   def to_s
     "Score<#{"+" * plus_count}#{"-" * minus_count}>"
+  end
+  
+  def victory?
+    plus_count == Guess::LENGTH
   end
   
   private

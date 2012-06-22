@@ -26,6 +26,10 @@ class TestScore < Test::Unit::TestCase
     assert_equal Score.new(1, 2), Score.from_string("+--")
   end
   
+  def test_is_victory
+    assert Score.from_string("++++").victory?, "should be victory"
+  end
+  
   private 
   
   def assert_score expected_score, a, b

@@ -1,1 +1,3 @@
 *.png
+doc/uncle*
+.DS_Store

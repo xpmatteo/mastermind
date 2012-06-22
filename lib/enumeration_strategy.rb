@@ -16,7 +16,7 @@ class EnumerationStrategy
     while !@game.compatible?(guess) && !guess.last?
       guess = guess.succ
     end
-    guess.last? && !@game.compatible?(guess) ? nil : guess
+    @game.compatible?(guess) ? guess : nil
   end
 end
 

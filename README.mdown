@@ -1,0 +1,31 @@
+This is an alternative solution to the Mastermind problem that Uncle Bob solves in his excellent video [Clean Code, Episode 9 - The Single Responsibility Principle](http://www.cleancoders.com/codecast/clean-code-episode-9/show "[Clean Coders](http://www.cleancoders.com/ "Clean Coders")").
+
+I wrote this as a demonstration of how much better the code turns out to be when you explicitly try to model problem domain concepts in your objects.
+
+To run the tests
+
+    ruby test_suite.rb
+    
+To play:
+
+    ruby run.rb
+    
+Choose a four-letter code with letters from A to F, answer a "+" for any letter that matches both letter and position, and "-" for any letter that matches the letter but not the position.  Example run:
+
+    # I chose AFAB
+    
+    $ ./run.rb 
+    Enter score for AAAA
+    ++
+    Enter score for AABB
+    +-+
+    Enter score for ACAB
+    +++
+    Enter score for ADAB
+    +++
+    Enter score for AEAB
+    +++
+    Enter score for AFAB
+    ++++
+    Game Over!
+    
